@@ -23,8 +23,8 @@ FRONTEND_ORIGIN = "http://localhost:5173"
 
 [[d1_databases]]
 binding = "DB"
-database_name = "omni-dashboard"
-database_id = "REPLACE_WITH_YOUR_D1_ID"
+database_name = "bughub-dashboard"
+database_id = "d96d7142-7ad7-4675-bb0d-2d3b8d74c100"
 
 [durable_objects]
 bindings = [

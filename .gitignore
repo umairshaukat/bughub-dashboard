@@ -7,3 +7,9 @@ dist
 backend/data
 frontend/dist
 
+
+# wrangler files
+.wrangler
+.dev.vars*
+!.dev.vars.example
+!.env.example
