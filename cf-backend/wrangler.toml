@@ -1,0 +1,36 @@
+name = "twilio-omni-dashboard-api"
+main = "src/index.ts"
+compatibility_date = "2026-05-26"
+
+# Set these in Cloudflare UI or via `wrangler secret put ...`:
+# - TWILIO_ACCOUNT_SID
+# - TWILIO_AUTH_TOKEN
+# - TWILIO_API_KEY_SID
+# - TWILIO_API_KEY_SECRET
+# - TWILIO_TWIML_APP_SID
+# - TWILIO_TR_WORKSPACE_SID
+# - TWILIO_TR_WORKFLOW_SID
+# - TWILIO_CONVERSATIONS_SERVICE_SID (optional but recommended for Conversations SDK)
+# - TWILIO_DEFAULT_FROM (optional)
+#
+# Public env vars:
+# - PUBLIC_BASE_URL (your Worker URL)
+# - FRONTEND_ORIGIN (your Pages URL)
+
+[vars]
+PUBLIC_BASE_URL = "http://localhost:8787"
+FRONTEND_ORIGIN = "http://localhost:5173"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "omni-dashboard"
+database_id = "REPLACE_WITH_YOUR_D1_ID"
+
+[durable_objects]
+bindings = [
+  { name = "EVENTS", class_name = "EventsHub" }
+]
+
+[[migrations]]
+tag = "v1"
+new_classes = ["EventsHub"]
