@@ -18,8 +18,8 @@ compatibility_date = "2026-05-26"
 # - FRONTEND_ORIGIN (your Pages URL)
 
 [vars]
-PUBLIC_BASE_URL = "http://localhost:8787"
-FRONTEND_ORIGIN = "http://localhost:5173"
+PUBLIC_BASE_URL = "https://twilio-omni-dashboard-api.ranatariq5248.workers.dev"
+FRONTEND_ORIGIN = "https://bughub-dashboard.pages.dev"
 
 [[d1_databases]]
 binding = "DB"
@@ -33,4 +33,4 @@ bindings = [
 
 [[migrations]]
 tag = "v1"
-new_classes = ["EventsHub"]
+new_sqlite_classes = ["EventsHub"]
